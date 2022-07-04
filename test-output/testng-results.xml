@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-04T10:42:41 ICT" name="Default suite" finished-at="2022-07-04T10:42:50 ICT" duration-ms="9864">
+    <groups>
+    </groups>
+    <test started-at="2022-07-04T10:42:41 ICT" name="Default test" finished-at="2022-07-04T10:42:50 ICT" duration-ms="9864">
+      <class name="com.telemarketing.test.NavigationTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.telemarketing.test.NavigationTest@6bbe85a8]" started-at="2022-07-04T10:42:41 ICT" name="init" finished-at="2022-07-04T10:42:44 ICT" duration-ms="3817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="cekSession()[pri:0, instance:com.telemarketing.test.NavigationTest@6bbe85a8]" started-at="2022-07-04T10:42:44 ICT" name="cekSession" finished-at="2022-07-04T10:42:45 ICT" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cekSession -->
+        <test-method signature="test_show_login_page()[pri:1, instance:com.telemarketing.test.NavigationTest@6bbe85a8]" started-at="2022-07-04T10:42:45 ICT" name="test_show_login_page" finished-at="2022-07-04T10:42:50 ICT" duration-ms="5671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_show_login_page -->
+      </class> <!-- com.telemarketing.test.NavigationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
