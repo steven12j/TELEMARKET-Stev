@@ -3,14 +3,11 @@ package com.telemarketing.test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
 	
 	protected WebDriver driver;
-
-	public MainPage(WebDriver driver) {
-		this.driver = driver;
-	}
 	
 	// pop up at main page
 	@FindBy(xpath = "//p[normalize-space()='Welcome to Tele Kita']")
@@ -22,14 +19,6 @@ public class MainPage {
 
 	@FindBy(xpath = "//font[normalize-space()='Tele Marketing']")
 	protected WebElement txtMainPage;
-
-	public String txtMainPage() {
-		return txtMainPage.getText();
-	}
-	
-	public void clickOk() {
-		btnOKPopUpOnMainPage.click();
-	}
 	
 	@FindBy(xpath = "//span[normalize-space()='DEVELOPER']")
 	public WebElement btnLogoutMainPage;
@@ -44,7 +33,31 @@ public class MainPage {
 	@FindBy(xpath = "//span[normalize-space()='YA']")
 	public WebElement btnYesLogout;
 	
+	//dropdown Report
+	@FindBy(xpath = "(//h3[normalize-space()='Report'])[1]")
+	public WebElement dropdownReport;
+	@FindBy(xpath = "//span[normalize-space()='Report Agree']")
+	public WebElement btnReportAgree;
 	
+	public MainPage(WebDriver driver) {
+		this.driver = driver;
+	}
 	
+	public String getTxtMainPage() {
+		return txtMainPage.getText();
+	}
+	
+	public void clickOk() {
+		btnOKPopUpOnMainPage.click();
+	}
+	
+	public ReportAgreePage clickReportAgree() {
+		dropdownReport.click();
+		btnReportAgree.click();
+		
+		ReportAgreePage reportAgreePage = PageFactory.initElements(driver, ReportAgreePage.class);
+		
+		return reportAgreePage;
+	}
 	
 }

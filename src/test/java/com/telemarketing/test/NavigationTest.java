@@ -50,19 +50,26 @@ public class NavigationTest {
 		
 		System.out.println("login berhasil");
 		
-		delay(2);
-		
+		delay(1);
 		
 		assertEquals(mainPage.txtPopUpOnMainPage.getText(), "Welcome to Tele Kita");
 		mainPage.btnOKPopUpOnMainPage.click();
 		System.out.println("click ok");
 		
-		assertEquals(mainPage.txtMainPage(), "Tele Marketing");
+		assertEquals(mainPage.getTxtMainPage(), "Tele Marketing");
 		delay(1);
 		
+		ReportAgreePage reportAgreePage = mainPage.clickReportAgree();
+		delay(1);
+		assertEquals(reportAgreePage.getTxtReportAgree(), "REPORT SETUJU");
+		
+		driver.close();
+		
+		/* LogOut
 		mainPage.btnLogoutMainPage.click();
 		delay(1);
 		mainPage.btnYesLogout.click();
+		*/
 		
 	}
 }
